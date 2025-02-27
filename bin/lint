@@ -5,7 +5,6 @@ set -e
 set -x
 
 # Actually run our tests.
-python -m flake8 --max-line-length 88 .
-python -m black --check inspector/ tests/
+python -m ruff check .
 python -m isort --check inspector/ tests/
 #python -m curlylint ./inspector/templates

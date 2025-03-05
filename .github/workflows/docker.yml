@@ -33,6 +33,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           platforms: linux/amd64
-          push: "${{ github.event_name == 'push' && github.ref == 'main' && 'true' }}"
+          push: "${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && 'true' }}"
           tags: |
             048268392960.dkr.ecr.us-west-2.amazonaws.com/rubygems/inspector:${{ github.sha }}
